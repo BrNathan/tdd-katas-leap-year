@@ -14,4 +14,8 @@ describe('LeapYearDetector - ', () => {
 	it('400 is a leap year', () => {
 		expect(detector.isLeapYear(400)).toBeTruthy();
 	});
+
+	it('401 is a not leap year', () => {
+		expect(detector.isLeapYear(401)).toBeFalsy();
+	});
 });
