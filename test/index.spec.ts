@@ -1,13 +1,17 @@
 import { LeapYearDetector } from '../src/index';
 
 describe('LeapYearDetector - ', () => {
-	let leapYearDetector: LeapYearDetector;
+	let detector: LeapYearDetector;
 
 	beforeEach(() => {
-		leapYearDetector = new LeapYearDetector();
+		detector = new LeapYearDetector();
 	});
 
 	it('exist', () => {
-		expect(leapYearDetector).toBeDefined();
+		expect(detector).toBeDefined();
+	});
+
+	it('400 is a leap year', () => {
+		expect(detector.isLeapYear(400)).toBeTruthy();
 	});
 });
