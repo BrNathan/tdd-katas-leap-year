@@ -1,13 +1,13 @@
-import { Init } from '../src/index';
+import { LeapYearDetector } from '../src/index';
 
-describe('Init class', () => {
-	let init: Init;
+describe('LeapYearDetector - ', () => {
+	let leapYearDetector: LeapYearDetector;
 
 	beforeEach(() => {
-		init = new Init();
+		leapYearDetector = new LeapYearDetector();
 	});
 
-	it('should return true', () => {
-		expect(init.init()).toBeTruthy();
+	it('exist', () => {
+		expect(leapYearDetector).toBeDefined();
 	});
 });
