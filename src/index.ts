@@ -5,9 +5,12 @@ export class LeapYearDetector {
 	 * isLeapYear
 	 */
 	public isLeapYear(year: number): boolean {
-		if (year%100 === 0 && year%this.DIVIDE400 !== 0) {
+		if (year % 100 === 0 && year % this.DIVIDE400 !== 0) {
 			return false;
 		}
-		return year%this.DIVIDE400 === 0;
+		else if (year % 4 === 0 && year % 100 !== 0) {
+			return true;
+		}
+		return year % this.DIVIDE400 === 0;
 	}
 }
