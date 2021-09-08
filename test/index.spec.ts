@@ -16,6 +16,10 @@ describe('LeapYearDetector - ', () => {
 	});
 
 	it('2800 is a leap year', () => {
-		expect(detector.isLeapYear(2000)).toBeTruthy();
+		expect(detector.isLeapYear(2800)).toBeTruthy();
+	});
+
+	it('1800 is a not leap year', () => {
+		expect(detector.isLeapYear(1800)).toBeFalsy();
 	});
 });
